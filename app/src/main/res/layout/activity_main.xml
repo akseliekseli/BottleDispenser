@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bottle_dispenser"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#00BCD4"
+        android:textColorHint="#03A9F4"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="160dp"
+        android:layout_height="68dp"
+        android:max="20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.139" />
+
+    <Button
+        android:id="@+id/buy_btn"
+        android:layout_width="137dp"
+        android:layout_height="59dp"
+        android:onClick="buyClick"
+        android:text="@string/buy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="279dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/moneyView"
+        android:layout_width="67dp"
+        android:layout_height="33dp"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="123dp"
+        android:layout_height="70dp"
+        android:onClick="addMoneyClick"
+        android:text="@string/add_money"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.135" />
+
+    <Button
+        android:id="@+id/return_btn"
+        android:layout_width="140dp"
+        android:layout_height="54dp"
+        android:onClick="returnMoneyClick"
+        android:text="@string/return_money"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toEndOf="@+id/buy_btn"
+        app:layout_constraintTop_toBottomOf="@+id/add_btn"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <TextView
+        android:id="@+id/bottleView"
+        android:layout_width="206dp"
+        android:layout_height="255dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buy_btn"
+        app:layout_constraintVertical_bias="0.809" />
+
+    <TextView
+        android:id="@+id/returnView"
+        android:layout_width="100dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottleView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/return_btn"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/boughtView"
+        android:layout_width="130dp"
+        android:layout_height="59dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottleView"
+        app:layout_constraintEnd_toStartOf="@+id/returnView"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buy_btn"
+        app:layout_constraintVertical_bias="0.269" />
+
+    <Button
+        android:id="@+id/btlist_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="printClick"
+        android:text="@string/list_of_bottles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toEndOf="@+id/bottleView"
+        app:layout_constraintTop_toBottomOf="@+id/returnView"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <Button
+        android:id="@+id/receipt_btn"
+        android:layout_width="133dp"
+        android:layout_height="47dp"
+        android:onClick="writeFile"
+        android:text="@string/receipt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottleView"
+        app:layout_constraintTop_toBottomOf="@+id/btlist_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

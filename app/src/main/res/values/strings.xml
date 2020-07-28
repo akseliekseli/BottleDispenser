@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BottleDispenser</string>
+    <string name="bottle_dispenser">Bottle Dispenser</string>
+    <string name="buy">Buy</string>
+    <string name="_0">0</string>
+    <string name="add_money">Add money</string>
+    <string name="button">Button</string>
+    <string name="return_money">Return money</string>
+    <string name="boughtView">TextView</string>
+    <string name="returnView">TextView</string>
+    <string name="bottleView">TextView</string>
+    <string name="list_of_bottles">List of bottles</string>
+    <string name="receipt">Receipt</string>
+</resources>
